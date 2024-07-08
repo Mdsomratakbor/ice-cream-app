@@ -1,1 +1,4 @@
 ﻿/.vs/Icecream
+/Icecream.Api/obj
+/Icecream.App/obj
+/Icecream.Shared/obj
