@@ -4,12 +4,107 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Icecream.App"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:pages ="clr-namespace:Icecream.App.Pages"
+    Shell.FlyoutBehavior="Flyout"
     Title="Icecream.App">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
+    <ShellContent ContentTemplate="{DataTemplate pages:OnboardingPage}"
+                  Shell.FlyoutBehavior="Disabled"
+                  Shell.FlyoutItemIsVisible="False"/>
+
+    <TabBar FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Title="Home"
+            Icon="home"
+            ContentTemplate="{DataTemplate pages:HomePage}"
+            Route="HomePage" />
+        <ShellContent
+            Title="Cart"
+            Icon="cart"
+            ContentTemplate="{DataTemplate pages:CartPage}"
+            Route="CartPage" />
+        <ShellContent
+            Title="Profile"
+            Icon="user"
+            ContentTemplate="{DataTemplate pages:ProfilePage}"
+            Route="ProfilePage" />
+    </TabBar>
+
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="Auto, *, Auto"
+                  RowDefinitions="Auto, Auto"
+                  Padding="10"
+                  ColumnSpacing="15"
+                  RowSpacing="5">
+                <Image 
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Source="{Binding FlyoutIcon}"
+                    HeightRequest="24"
+                    WidthRequest="24"/>
+                <Label 
+                    Grid.Column="1"
+                      Grid.Row="0"
+                    Text="{Binding Title}"
+                    TextColor="DeepPink"
+                    FontSize="16"/>
+                <Image Grid.Column="2"
+                       Grid.Row="0"
+                       Source="right_arrow"
+                       WidthRequest="24"/>
+                <BoxView Grid.Row="1"
+                         Grid.ColumnSpan="3"
+                         HeightRequest="1"
+                         Color="DeepPink">
+
+                </BoxView>
+            </Grid>
+           
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    <Shell.FlyoutHeader>
+        <Border 
+                BackgroundColor="DeepPink"
+                Padding="10"
+                StrokeThickness="0">
+            <VerticalStackLayout HorizontalOptions="Center" 
+                                 Spacing="10">
+                <Image Source="icecream"
+                       HeightRequest="150"
+                       WidthRequest="150"
+                       HorizontalOptions="Center"/>
+                <Label Text="MSA Ice Cream"
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       TextColor="White"
+                       TextTransform="Uppercase"
+                       FontAttributes="Bold"/>
+            </VerticalStackLayout>
+        </Border>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <Border
+                BackgroundColor="DeepPink"
+                Padding="10"
+                StrokeThickness="0">
+            <Label
+                Text="Developed By Ninja Coder"
+                TextColor="White"
+                HorizontalOptions="Center"
+                FontSize="15"
+                FontAttributes="Bold"/>
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FlyOutFooter_Tapped">
+                    
+                </TapGestureRecognizer>
+            </Border.GestureRecognizers>
+
+        </Border>
+    </Shell.FlyoutFooter>
 
 </Shell>

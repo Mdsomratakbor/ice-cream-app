@@ -214,6 +214,24 @@
     <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-100.png">
+      <PackagePath>home.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-125.png">
+      <PackagePath>home.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-150.png">
+      <PackagePath>home.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-200.png">
+      <PackagePath>home.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\home.scale-400.png">
+      <PackagePath>home.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\icecream.scale-100.png">
+      <PackagePath>icecream.scale-100.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.App\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Icecream.App.deps.json">
       <PackagePath>Icecream.App.deps.json</PackagePath>
     </AppxPackagedFile>
@@ -426,6 +444,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.windowsappsdk\1.3.230724000\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\PersonalProject\MobileApplications\Icecream\Icecream.Shared\bin\Debug\net8.0\Icecream.Shared.dll">
+      <PackagePath>Icecream.Shared.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\USER\.nuget\packages\microsoft.maui.controls.compatibility\8.0.6\lib\net8.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>

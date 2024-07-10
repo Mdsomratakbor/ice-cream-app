@@ -1,8 +1,8 @@
 namespace Icecream.App.Pages;
 
-public partial class SignUp : ContentPage
+public partial class SignUpPage : ContentPage
 {
-	public SignUp()
+	public SignUpPage()
 	{
 		InitializeComponent();
 	}
