@@ -17,9 +17,7 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
-    <ShellContent ContentTemplate="{DataTemplate pages:OnboardingPage}"
-                  Shell.FlyoutBehavior="Disabled"
-                  Shell.FlyoutItemIsVisible="False"/>
+    <ShellContent ContentTemplate="{DataTemplate pages:OnboardingPage}"/>
 
     <TabBar FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent

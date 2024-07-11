@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Icecream.App.Pages.OnboardingPage"
              Title="OnboardingPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.FlyoutItemIsVisible="False">
     <Grid RowDefinitions="*, Auto"
           Padding="0,0,0,40">
         <VerticalStackLayout
