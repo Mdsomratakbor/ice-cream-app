@@ -9,10 +9,10 @@ namespace Icecream.Api.Data.Entities
         [Required, MaxLength(100)]
         public string Name { get; set; }
         [Range(0.1, double.MaxValue) ]
-        private double Price { get; set; }
+        public double Price { get; set; }
 
         [Required, MaxLength(180)]
         public string Image { get;set; }
-        public virtual ICollection<IceCreamOptions> Options { get; set; }
+        public virtual ICollection<IceCreamOption> Options { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Icecream.Api.Data.Entities
 {
-    public class IceCreamOptions
+    public class IceCreamOption
     {
         public int IceCreamId { get; set; }
 
