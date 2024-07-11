@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Images\cart.svg" />
 	  <None Remove="Resources\Images\home.svg" />
 	  <None Remove="Resources\Images\icecream.png" />
+	  <None Remove="Resources\Images\logout.svg" />
 	  <None Remove="Resources\Images\right_arrow.svg" />
 	  <None Remove="Resources\Images\user.svg" />
 	</ItemGroup>

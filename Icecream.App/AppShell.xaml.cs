@@ -32,5 +32,10 @@ namespace Icecream.App
         {
             await Launcher.OpenAsync("https://www.youtube.com");
         }
+
+        private async void SignoutMenuItem_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.DisplayAlert("Alert","Signout menu item clicked", "Ok");
+        }
     }
 }

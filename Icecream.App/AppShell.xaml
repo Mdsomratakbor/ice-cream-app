@@ -34,6 +34,10 @@
             Route="ProfilePage" />
     </TabBar>
 
+    <MenuItem 
+        IconImageSource="logout" 
+        Text="Signout"
+        Clicked="SignoutMenuItem_Clicked"/>
     <Shell.ItemTemplate>
         <DataTemplate>
             <Grid ColumnDefinitions="Auto, *, Auto"
@@ -67,6 +71,29 @@
            
         </DataTemplate>
     </Shell.ItemTemplate>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+          <Grid 
+              ColumnDefinitions="Auto, *"
+              Padding="10"
+              ColumnSpacing="15"
+              RowSpacing="5">
+          <Image 
+                Grid.Column="0"
+                Source="{Binding Icon}"
+                HeightRequest="24"
+                WidthRequest="24"/>
+          <Label 
+                Grid.Column="1"
+                Text="{Binding Text}"
+                TextColor="DeepPink"
+                FontSize="16"/>
+            
+            </Grid>
+
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    
     <Shell.FlyoutHeader>
         <Border 
                 BackgroundColor="DeepPink"
