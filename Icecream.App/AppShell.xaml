@@ -3,11 +3,16 @@
     x:Class="Icecream.App.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolKit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:local="clr-namespace:Icecream.App"
     xmlns:pages ="clr-namespace:Icecream.App.Pages"
     Shell.FlyoutBehavior="Flyout"
     Title="Icecream.App">
 
+    <Shell.Behaviors>
+        <toolKit:StatusBarBehavior StatusBarColor="DeepPink"
+                                   StatusBarStyle="LightContent"/>
+    </Shell.Behaviors>
     <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
