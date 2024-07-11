@@ -2,22 +2,37 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Icecream.App.Pages.OnboardingPage"
-             Title="OnboardingPage">
-    <VerticalStackLayout>
-        <Button Clicked="Signin_Clicked"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        Text="Sign In"/>
-        <Button Clicked="Signup_Clicked"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        Text="Sign Up"/>
-
-        <Button Clicked="Button_Clicked"
+             Title="OnboardingPage"
+             Shell.NavBarIsVisible="False">
+    <Grid RowDefinitions="*, Auto"
+          Padding="0,0,0,40">
+        <VerticalStackLayout
+                Grid.Row="0"
+                Spacing="20"
                 HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Text="Go To App">
-            
-        </Button>
-    </VerticalStackLayout>
+                VerticalOptions="Center">
+            <Image Source="icecream"
+                   HeightRequest="250"
+                   WidthRequest="250"
+                   Aspect="AspectFill"/>
+            <Label Text="Welcome"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+            <Label Text="MSA ICE CREAMS"
+                   FontSize="25"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+            <Label Text="Home of Delicious Ice Creams"
+                   FontSize="18"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+        <VerticalStackLayout
+                    Grid.Row="1"
+                    Spacing="20"
+                    HorizontalOptions="Center">
+            <Button Text="Singnup" Clicked="Signup_Clicked"/>
+            <Button Text="Signin" Clicked="Signin_Clicked"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
