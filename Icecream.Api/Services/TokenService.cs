@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Icecream.Shared.Dtos;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Icecream.Api.Services
             _configuration = configuration;
         }
 
-        public string GenerateJwt(Guid userId, string userName, string email, string address)
+        public string GenerateJwt(LoggedInUserDto user)
         {
 
           
@@ -28,10 +29,10 @@ namespace Icecream.Api.Services
                 var expireInMinutes = Convert.ToInt32(_configuration["Jwt:ExpireInMinute"]);
 
                 Claim[] claims = [
-                    new Claim(ClaimTypes.NameIdentifier, userId.ToString()),
-                    new Claim(ClaimTypes.Name, userName),
-                    new Claim(ClaimTypes.Email,email),
-                    new Claim(ClaimTypes.StreetAddress, address)
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                    new Claim(ClaimTypes.Name, user.Name),
+                    new Claim(ClaimTypes.Email,user.Email),
+                    new Claim(ClaimTypes.StreetAddress, user.Address)
                     ];
 
                 var token = new JwtSecurityToken(

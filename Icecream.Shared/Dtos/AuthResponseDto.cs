@@ -1,4 +1,4 @@
 ﻿namespace Icecream.Shared.Dtos
 {
-    public record AuthResponseDto(string user, string Token);
+    public record AuthResponseDto(LoggedInUserDto user, string Token);
 }
