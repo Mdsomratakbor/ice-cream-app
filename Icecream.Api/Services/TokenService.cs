@@ -21,11 +21,9 @@ namespace Icecream.Api.Services
 
         public string GenerateJwt(Guid userId, string userName, string email, string address)
         {
-            var secreteKey = _configuration["Jwt:SecretKey"];
-            if (secreteKey != null)
-            {
-                var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secreteKey));
-                var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+          
+                var credentials = new SigningCredentials(GetSecurityKey(_configuration), SecurityAlgorithms.HmacSha256);
                 var issuer = _configuration["Jwt:Issuer"];
                 var expireInMinutes = Convert.ToInt32(_configuration["Jwt:ExpireInMinute"]);
 
@@ -44,11 +42,26 @@ namespace Icecream.Api.Services
                     signingCredentials: credentials);
                 var jwt = new JwtSecurityTokenHandler().WriteToken(token);
                 return jwt;
-            }
-            else
+          
+        }
+        public static TokenValidationParameters GetTokenValidationParameters(IConfiguration configuration)
+        {
+            return new TokenValidationParameters
             {
-                return "Please set the secrete key";
-            }
+                ValidateAudience = false,
+                ValidateIssuer = true,
+                ValidateLifetime = true,
+                ValidIssuer = configuration["Jwt:Issuer"],
+                IssuerSigningKey = GetSecurityKey(configuration)
+
+    };
+        }
+        public static SymmetricSecurityKey GetSecurityKey(IConfiguration configuration)
+        {
+            var secreteKey = configuration["Jwt:SecretKey"];
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secreteKey));
+            return securityKey;
+
         }
     }
 }
