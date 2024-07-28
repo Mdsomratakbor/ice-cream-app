@@ -1,4 +1,5 @@
 using Icecream.Api.Data;
+using Icecream.Api.Endpoints;
 using Icecream.Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -47,8 +48,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
-app.MapControllers();
+app.MapEndpoints();
 
 app.Run();
 
